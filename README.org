@@ -1,0 +1,6 @@
+* vterm-hotkey
+A small elisp package for managing multiple instances of [[https://github.com/akermu/emacs-libvterm][VTerm]].
+Inspiration taken from [[https://github.com/suonlight/multi-vterm][multi-vterm]].
+
+* Usage
+M-x vterm-hotkey then press a key.
