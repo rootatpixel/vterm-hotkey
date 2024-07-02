@@ -70,11 +70,10 @@
 
 (defun vterm-hotkey-buffer-close-hook ()
   "Functions run by `vterm-hotkey' when a buffer is killed."
-  (when (derived-mode-p 'vterm-mode)
-    (let ((vterm-hotkey-buffer (current-buffer)))
-      (setq vterm-hotkey-buffer-alist
-	    (rassq-delete-all vterm-hotkey-buffer
-			      vterm-hotkey-buffer-alist)))))
+  (let ((vterm-hotkey-buffer (current-buffer)))
+    (setq vterm-hotkey-buffer-alist
+	  (rassq-delete-all vterm-hotkey-buffer
+			    vterm-hotkey-buffer-alist))))
 		 			       
 ;; Interactive Functions
 ;;;###autoload
